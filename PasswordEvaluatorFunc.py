@@ -14,27 +14,30 @@ def score(password):
 	return score
 
 		
-def eval(score):
+def eval_strength(score):
 	if score == 4:
 		return "Strong"
-	if score == 3:
+	elif score == 3:
 		return "Good"
-	if score == 2:
+	elif score == 2:
 		return "Weak"
-	if score <= 1:
+	elif score <= 1:
 		return "Very Weak"
 	
 	
 def insert():
 	while True:
-		password = str(input("Enter password: "))
+		password = input("Enter password: ")
 		if len(password) < 8:
 			print("Enter at least 8 caharacters long. Try again")
 		else:
 			break
 	pass_score = score(password)
-	evaluation = eval(pass_score)
+	evaluation = eval_strength(pass_score)
 	print(evaluation)
 	
 
-insert()
+if  __name__ == "__main__":
+	insert()
+else: 
+	print("Run on the same file")

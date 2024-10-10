@@ -1,7 +1,7 @@
 import math as m
 
 # Functions
-##--
+
 def ci_proportion_z(sample, proportion, z_score):
 	percent_p = proportion/sample
 	se = m.sqrt((.6*(1-.6))/200)
@@ -40,8 +40,6 @@ def main():
 	else: 
 		print("Invalid")
 		
-##--
-
 
 
 if __name__ == "__main__":
